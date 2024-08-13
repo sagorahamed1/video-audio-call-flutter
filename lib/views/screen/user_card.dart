@@ -65,15 +65,12 @@ class UserCard extends StatelessWidget {
     return ZegoSendCallInvitationButton(
       invitees: [
         ZegoUIKitUser(
-          id: userModel.userName,
-          name: userModel.name,
+          id: userModel.email,
+          name: userModel.email,
         )
       ],
       resourceID: 'zegouikit_call',
       isVideoCall: isVideo,
-      // onPressed: (BuildContext context) {
-      //   // Implement your custom logic here if needed
-      // },
     );
   }
 }

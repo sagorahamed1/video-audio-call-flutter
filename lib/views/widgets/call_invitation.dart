@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
 import 'package:zego_uikit_signaling_plugin/zego_uikit_signaling_plugin.dart';
 
@@ -9,7 +9,6 @@ class CallInvitation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Initialize the ZegoUIKitPrebuiltCallInvitationService
     ZegoUIKitPrebuiltCallInvitationService().init(
       appID: 752493796,
       appSign: '48658a3e1cc267916153e4fdb37fd6dfaf2b3ba78fd1f6e81b16b6b64ebde6f0',
@@ -17,8 +16,6 @@ class CallInvitation extends StatelessWidget {
       userName: userName,
       plugins: [ZegoUIKitSignalingPlugin()],
     );
-
-    // Return the appropriate widget
     return child;
   }
 }

@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         child: Text('User not logged in. Please log in.'),
       )
           : CallInvitation(
-        userName: FirebaseServices.currentUser.name,
+        userName: FirebaseServices.currentUser.email,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                     }
                     final docs = snapshot.data?.docs;
                     if (docs == null || docs.isEmpty) {
-                      return Center(child: Text("No Data"));
+                      return const Center(child: Text("No Data"));
                     }
                     return ListView.builder(
                       itemCount: docs.length,
