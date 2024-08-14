@@ -63,6 +63,7 @@ class UserCard extends StatelessWidget {
 
   ZegoSendCallInvitationButton actionButton(BuildContext context, bool isVideo) {
     return ZegoSendCallInvitationButton(
+
       invitees: [
         ZegoUIKitUser(
           id: userModel.email,
